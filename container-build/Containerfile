@@ -3,6 +3,10 @@ FROM quay.io/redhattraining/httpd-parent
 
 EXPOSE 8080
 
+#LABEL io.k8s.description="A BAsic apache HTTP server" \
+#      io.k8s.display-name="HTTP SERVSER"
+#      io.openshift.expose
+
 LABEL io.k8s.description="A basic Apache HTTP Server child images, uses ONBUILD" \
       io.k8s.display-name="Apache HTTP Server" \
       io.openshift.expose-services="8080:http" \
